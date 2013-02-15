@@ -1,0 +1,14 @@
+[user]
+	name = Zach Smith
+	email = zach@substantial.com
+[core]
+	autocrlf = input
+	safecrlf = true
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = always
+[format]
+  pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset

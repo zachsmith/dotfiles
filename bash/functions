@@ -1,0 +1,8 @@
+# current git branch
+function cgb  {
+  git branch |grep ^* |cut -f 2 -d ' '
+}
+
+function grh {
+  git reset --hard origin/`cgb`
+}
