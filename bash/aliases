@@ -1,6 +1,8 @@
 alias via='vim ~/.bash/aliases'
 alias cdd='cd ~/Development'
 alias la='. ~/.bash/aliases'
+alias vi='mvim -v'
+alias vim='mvim -v'
 
 ### RUBY!!! ###
 alias be='bundle exec'
@@ -14,7 +16,6 @@ alias glx='git log --graph --all --decorate --pretty=format:"%C(magenta)%h %C(bl
 alias glh='git update-index --assume-unchanged'
 alias gluh='git update-index --noassume-unchanged'
 alias glsh='git ls-files -v | grep ^[a-z]'
-#alias grh='git reset --hard origin/`current_git_branch`'
 alias gco='git checkout'
 alias gcb='git checkout -b'
 alias gcm='git checkout master'
