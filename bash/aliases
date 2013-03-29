@@ -8,6 +8,9 @@ alias vim='mvim -v'
 alias be='bundle exec'
 alias bers='be rails s'
 alias berc='be rails c'
+alias begs='be guard start'
+alias bi='bundle install'
+alias db:nuke='rake db:drop db:create db:migrate db:seed db:test:prepare'
 
 ### GIT!!!! ###
 alias ga='grep git ~/.bash/aliases | grep -v galias | cut -f 2- -d " "'
@@ -21,3 +24,8 @@ alias gcb='git checkout -b'
 alias gcm='git checkout master'
 alias gs='git status'
 alias gf='git fetch -p'
+alias gb='git branch -a'
+alias gpoh='git push origin head'
+
+#Mac
+alias marked='open -a Marked.app'
