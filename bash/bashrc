@@ -45,5 +45,8 @@ export RUBY_HEAP_FREE_MIN=500000
 # vi command mode
 set -o vi
 
+stty ixany
+stty ixoff -ixon
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
