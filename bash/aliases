@@ -12,7 +12,7 @@ alias bers='be rails s'
 alias berc='be rails c'
 alias begs='be guard start'
 alias bi='bundle install'
-alias tch-bi='bundle install --standalone --binstubs ~/Development/teaching_channel/teaching-channel/bundle/bin'
+alias tch-bi='bundle install --standalone --binstubs ~/Development/teaching-channel/bundle/bin'
 alias db:nuke='rake db:drop db:create db:migrate db:seed db:test:prepare'
 
 ### GIT!!!! ###
