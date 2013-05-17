@@ -1,8 +1,4 @@
-export ANDROID_HOME=$HOME/Development/android-sdk-macosx
-
-#PATH=$PATH:$HOME/.rvm/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$PATH:$HOME/.rvm/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$PATH:$HOME/.rvm/bin
 source ~/.bash/colors
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
@@ -45,8 +41,10 @@ export RUBY_HEAP_FREE_MIN=500000
 # vi command mode
 set -o vi
 
-stty ixany
-stty ixoff -ixon
+# disable flow control (ctrl-s)
+stty -ixoff
+stty stop undef
+stty start undef
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
