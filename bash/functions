@@ -4,5 +4,9 @@ function cgb  {
 }
 
 function grh {
+  git reset --hard head
+}
+
+function groh {
   git reset --hard origin/`cgb`
 }
