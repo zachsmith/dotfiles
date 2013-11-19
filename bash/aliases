@@ -33,7 +33,7 @@ alias gcm='git checkout master'
 alias gs='git status'
 alias gf='git fetch -p'
 alias gb='git branch -a'
-alias gpoh='git push origin head'
+alias gpoh='git push origin `cgb`'
 alias glc='git log --stat origin/`cgb`'
 
 #Mac
