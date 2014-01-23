@@ -13,7 +13,13 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWUPSTREAM=verbose
 PS1="${COLOR_RED}[${COLOR_WHITE}\w${COLOR_GREEN}\$(__git_ps1 ' (%s)')${COLOR_RED}]${COLOR_NONE}\$ "
 
-export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+export BASE_PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+if [ ! -z `which direnv` ]
+then
+  DIRENV_PROMPT_COMMAND="eval \"\$(direnv export bash)\""
+fi
+export PROMPT_COMMAND="$BASE_PROMPT_COMMAND;$DIRENV_PROMPT_COMMAND"
+
 function name_tab() {
   echo -ne "\033]0;$1\007"
 }
@@ -46,7 +52,5 @@ stty start undef
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
+export PATH="~/bin:/usr/local/bin:/usr/local/heroku/bin:$PATH:$HOME/.rvm/bin"
 export EDITOR="vim"
