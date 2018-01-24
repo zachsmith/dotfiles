@@ -1,8 +1,6 @@
 alias via='vim ~/.bash/aliases'
-alias cdd='cd ~/Development'
+alias cdd='cd /mnt/c/Users/zach/Development'
 alias la='. ~/.bash/aliases'
-alias vi='mvim -v'
-alias vim='mvim -v'
 alias _reload='. ~/.bashrc'
 alias hogs='ps -amcwwwxo "command %mem %cpu" | grep -v grep |head -11'
 
@@ -13,12 +11,6 @@ alias berc='be rails c'
 alias begs='be guard start'
 alias bi='bundle install'
 alias db:nuke='rake db:drop db:create db:migrate db:seed db:test:prepare'
-  ## Tch
-  alias tch-bi='bundle install --standalone --binstubs ~/Development/teaching-channel/bundle/bin'
-  alias zrmp='zeus rake db:migrate db:test:prepare'
-  alias zrr='zeus rake routes'
-  alias zc='zeus c'
-  alias zdbc='zeus dbconsole'
 
 ### GIT!!!! ###
 alias ga='grep git ~/.bash/aliases | grep -v galias | cut -f 2- -d " "'
@@ -37,6 +29,3 @@ alias gpoh='git push origin `cgb`'
 alias glc='git log --stat origin/`cgb`'
 alias gbd='git branch --merged | egrep -v master'
 alias gbdd='gbd | xargs git branch -d'
-
-#Mac
-alias marked='open -a Marked.app'
