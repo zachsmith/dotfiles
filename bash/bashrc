@@ -1,12 +1,10 @@
-export ANDROID_HOME="$HOME/Development/adt-bundle-mac"
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$PATH:$HOME/.rvm/bin:$ANDROID_HOME/sdk/tools:$ANDROID_HOME/sdk/platform-tools
+#export PATH=~/bin:$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$PATH
+
+#export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$PATH:$HOME/.rvm/bin
+export PATH=~/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$PATH
 
 source ~/.bash/colors
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
-
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi
 
 # git prompt goodnes
 GIT_PS1_SHOWDIRTYSTATE=true
@@ -36,16 +34,6 @@ shopt -s histappend
 source ~/.bash/functions
 source ~/.bash/aliases
 
-if [ -f `brew --prefix`/etc/autojump.sh ]; then
-  . `brew --prefix`/etc/autojump.sh
-fi
-
-export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_HEAP_SLOTS_INCREMENT=1000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=1000000000
-export RUBY_HEAP_FREE_MIN=500000
-
 # disable flow control (ctrl-s)
 stty -ixoff
 stty stop undef
@@ -54,5 +42,4 @@ stty start undef
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
-export PATH="~/bin:/usr/local/bin:/usr/local/heroku/bin:$PATH:$HOME/.rvm/bin"
 export EDITOR="vim"
