@@ -1,6 +1,6 @@
 [user]
 	name = Zach Smith
-	email = zach@crosswise.xyz
+	email = zach@zaxyth.me
 [core]
 	autocrlf = input
 	safecrlf = true
@@ -15,3 +15,5 @@
   pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
 [github]
 	user = zachsmith
+[push]
+	default = simple

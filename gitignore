@@ -1,3 +1,4 @@
 .ruby-version
+/spring/*.pid
 *.plist.*
 .DS_Store
