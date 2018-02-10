@@ -4,6 +4,7 @@ source ~/.bash/colors
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
 # git prompt goodnes
+[[ -s "/etc/bash_completion.d/git-prompt" ]] && source "/etc/bash_completion.d/git-prompt" # Load GITPS1
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
