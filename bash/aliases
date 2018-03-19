@@ -2,6 +2,8 @@ alias cdd='cd ~/Development'
 alias la='. ~/.bash/aliases'
 alias _reload='. ~/.bashrc'
 alias hogs='ps -amcwwwxo "command %mem %cpu" | grep -v grep |head -11'
+alias tad='tmux attach -d'
+alias vi=vim
 
 ### RUBY!!! ###
 alias be='bundle exec'
