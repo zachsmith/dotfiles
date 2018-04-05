@@ -1,25 +1,40 @@
 #!/bin/bash
 
-## shell
-ln -s ~/dotfiles/bash ~/.bash
-ln -s ~/.bash/bash_profile ~/.bash_profile
-ln -s ~/.bash/bashrc ~/.bashrc
+FILES="
+bash
+bashrc
+bash_profile
+ackrc
+agignore
+gitconfig
+gitignore
+irbrc
+pryrc
+pryrc_rails
+"
 
-## search
-ln -s ~/dotfiles/ackrc ~/.ackrc
-ln -s ~/dotfiles/agignore ~/.agignore
+# Remove existing links or files - this is dangerous
+if [ "$1" == "reset" ]
+then
+  for f in $FILES
+  do
+    if [ -h ~/.$f ]
+    then
+      echo "Unlinking ~/.$f"
+      rm ~/.$f
+    else
+      echo "WARNING: ~/.$f exists and appears to be a regular file - not removing"
+    fi
+  done
+fi
 
-## git
-ln -s ~/dotfiles/gitconfig ~/.gitconfig
-ln -s ~/dotfiles/gitignore ~/.gitignore
-
-## ruby
-ln -s ~/dotfiles/irbrc ~/.irbrc
-ln -s ~/dotfiles/pryrc ~/.pryrc
-ln -s ~/dotfiles/pryrc_rails ~/.pryrc_rails
-
-## tmux
-ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
-
-
-
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+for f in $FILES
+do
+  if [ ! -f ~/.$f ]
+  then
+    echo "Linking $f" && ln -s $DIR/$f ~/.$f
+  else
+    echo "WARNING: ~/.$f exists - not linking"
+  fi
+done
