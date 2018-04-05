@@ -19,12 +19,15 @@ if [ "$1" == "reset" ]
 then
   for f in $FILES
   do
-    if [ -h ~/.$f ]
+    if [ -f ~/.$f -o -d ~/.$f ]
     then
-      echo "Unlinking ~/.$f"
-      rm ~/.$f
-    else
-      echo "WARNING: ~/.$f exists and appears to be a regular file - not removing"
+      if [ -h ~/.$f ]
+      then
+        echo "Unlinking ~/.$f"
+        rm ~/.$f
+      else
+        echo "WARNING: ~/.$f exists and appears to be a regular file - not removing"
+      fi
     fi
   done
 fi
@@ -34,7 +37,7 @@ for f in $FILES
 do
   if [ ! -f ~/.$f ]
   then
-    echo "Linking $f" && ln -s $DIR/$f ~/.$f
+    echo "Linking $DIR/$f to ~/.$f" && ln -s $DIR/$f ~/.$f
   else
     echo "WARNING: ~/.$f exists - not linking"
   fi
