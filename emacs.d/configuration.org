@@ -175,7 +175,6 @@ emacs frames behave a bit more like tmux when rearranging.
 
 (load-theme 'solarized-dark t)
 #+END_SRC
-
 * UI preferences
 
 ** Tweak window chrome
@@ -255,16 +254,25 @@ Define a few capture templates
          (file+headline org-index-file "Inbox")
          "* TODO %?\n")))
 #+END_SRC
+
+Enable spell-checking...I'm rael bad at spelling.
+
+#+BEGIN_SRC emacs-lisp
+(add-hook 'org-mode-hook 'flyspell-mode)
+#+END_SRC
 * Git
 
 Magit is amazing...and I barely know how to use it... This [[https://github.com/magit/magit/wiki/Cheatsheet][Cheat Sheet]] is helpful.
+
+Turn on spell checking for commits - I make tons of typos :-(
 
 #+BEGIN_SRC emacs-lisp
 (use-package magit
   :bind ("C-x g" . magit-status)
 
   :config
-  (setq git-commit-summary-max-length 50))
+  (setq git-commit-summary-max-length 50)
+  (add-hook 'git-commit-mode-hook 'turn-on-flyspell))
 #+END_SRC
 * Programming
 
@@ -344,4 +352,16 @@ Use projectile-ag to search project for symbol under the cursor
 
 (global-set-key (kbd "C-c v") 'projectile-ag)
 (global-set-key (kbd "C-c C-v") 'zxmth/search-project-for-symbol-at-point)
+#+END_SRC
+* Writing
+** Markdown
+
+I like to write in markdown somtimes.
+I often write markdown that will appear on Github...so prefer gfm by default.
+#+BEGIN_SRC emacs-lisp
+(use-package markdown-mode
+  :commands gfm-mode
+  :mode (("\\.md$" . gfm-mode))
+  :config
+  (add-hook 'gfm-mode-hook 'flyspell-mode))
 #+END_SRC
