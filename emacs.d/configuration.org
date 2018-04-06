@@ -363,5 +363,19 @@ I often write markdown that will appear on Github...so prefer gfm by default.
   :commands gfm-mode
   :mode (("\\.md$" . gfm-mode))
   :config
+  (setq markdown-command "pandoc --standalone --mathjax --from=markdown")
   (add-hook 'gfm-mode-hook 'flyspell-mode))
+#+END_SRC
+
+** Wrap paragraphs
+
+/AutoFillMode/ automatically wraps paragraphs. This is typically what I want so
+this should make sure that it wraps by default. Sometimes I don't want to use it
+so give me a way to turn it off, too.
+
+#+BEGIN_SRC emacs-lisp
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+(add-hook 'gfm-mode-hook 'turn-on-auto-fill)
+(add-hook 'org-mode-hook 'turn-on-auto-fill)
+(global-set-key (kbd "C-c q") 'auto-fill-mode)
 #+END_SRC
