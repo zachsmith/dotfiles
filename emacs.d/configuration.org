@@ -3,7 +3,7 @@
 #+EMAIL: z@zxmth.us
 #+OPTIONS: toc:nil num:nil
 
-Lots of ideas stollen (with admiration) from [[https://github.com/hrs][Harry R. Schwartz]].
+Lots of ideas stolen (with admiration) from [[https://github.com/hrs][Harry R. Schwartz]].
 
 * Basic Configurations
 
