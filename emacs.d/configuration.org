@@ -259,6 +259,19 @@ Magit is amazing...and I barely know how to use it... This [[https://github.com/
 Use web-mode for a host of basic web-y file formats
 
 #+BEGIN_SRC emacs-lisp
+(use-package web-mode
+  :ensure t
+  :defer t
+  :config
+  (setq web-mode-attr-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-indent-style 2)
+  (setq web-mode-markup-indent-offset 2)
+(setq web-mode-sql-indent-offset 2))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
  (add-hook 'web-mode-hook
            (lambda ()
              (rainbow-mode)
@@ -281,7 +294,9 @@ Use web-mode for a host of basic web-y file formats
 Use rjsx-mode for jsx files.
 
 #+BEGIN_SRC emacs-lisp
-(use-package rjsx-mode)
+(use-package rjsx-mode
+  :config
+  (setq js2-basic-offset 2))
 #+END_SRC
 ** Projectile
 
