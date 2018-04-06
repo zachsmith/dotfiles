@@ -99,7 +99,15 @@ Enable auto-complete - I use the [[https://github.com/auto-complete/auto-complet
 #+BEGIN_SRC emacs-lisp
 (use-package auto-complete
   :config
-  (ac-config-default))
+  (ac-config-default)
+  (add-to-list 'ac-modes 'name-of-mod)
+  (define-globalized-minor-mode zxmth/global-auto-complete-mode
+    auto-complete-mode (lambda ()
+                       (if (not (minibufferp (current-buffer)))
+                         (auto-complete-mode 1))
+                       ))
+  (zxmth/global-auto-complete-mode t))
+
 #+END_SRC
 
 ** Helm
