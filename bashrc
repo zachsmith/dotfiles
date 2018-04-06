@@ -31,9 +31,14 @@ source ~/.bash/functions
 source ~/.bash/aliases
 
 # disable flow control (ctrl-s)
-stty -ixoff
-stty stop undef
-stty start undef
+# first, make sure shell is interactive to avoid 'Inappropriate ioctl'
+# messages from things like scp, git+ssh, etc
+if [[ $- == *i* ]]
+then
+  stty -ixoff
+  stty stop undef
+  stty start undef
+fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
