@@ -39,6 +39,12 @@ Use spaces instead of tabs and set the default tabstop to 2
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 #+END_SRC
+
+Don't litter my init file with custom settings
+#+BEGIN_SRC emacs-lisp
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file 'noerror)
+#+END_SRC
 * Packages
 
 Use =use-package= for managing packages in emacs. Setup some default package
