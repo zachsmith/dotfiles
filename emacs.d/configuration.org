@@ -204,20 +204,6 @@ Make the frame title match the current project as defined by Projectile
 #+END_SRC
 * Org Mode Settings
 
-Use pretty bullets
-
-#+BEGIN_SRC emacs-lisp
-(use-package org-bullets
-  :init
-  (add-hook 'org-mode-hook #'org-bullets-mode))
-#+END_SRC
-
-I like seeing a little downward-pointing arrow instead of the usual ellipsis (...) that org displays when there’s stuff under a header.
-
-#+BEGIN_SRC emacs-lisp
-(setq org-ellipsis "⤵")
-#+END_SRC
-
 Use syntax highlighting in source blocks while editing
 
 #+BEGIN_SRC emacs-lisp
@@ -259,18 +245,6 @@ Enable spell-checking...I'm rael bad at spelling.
 
 #+BEGIN_SRC emacs-lisp
 (add-hook 'org-mode-hook 'flyspell-mode)
-#+END_SRC
-
-I don't like the way that org-mode changes the font sizes
-
-#+BEGIN_SRC emacs-lisp
-(custom-set-faces
-  '(org-level-1 ((t (:inherit outline-1 :height 1.0))))
-  '(org-level-2 ((t (:inherit outline-2 :height 1.0))))
-  '(org-level-3 ((t (:inherit outline-3 :height 1.0))))
-  '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
-  '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
-)
 #+END_SRC
 * Git
 
