@@ -260,6 +260,18 @@ Enable spell-checking...I'm rael bad at spelling.
 #+BEGIN_SRC emacs-lisp
 (add-hook 'org-mode-hook 'flyspell-mode)
 #+END_SRC
+
+I don't like the way that org-mode changes the font sizes
+
+#+BEGIN_SRC emacs-lisp
+(custom-set-faces
+  '(org-level-1 ((t (:inherit outline-1 :height 1.0))))
+  '(org-level-2 ((t (:inherit outline-2 :height 1.0))))
+  '(org-level-3 ((t (:inherit outline-3 :height 1.0))))
+  '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
+  '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
+)
+#+END_SRC
 * Git
 
 Magit is amazing...and I barely know how to use it... This [[https://github.com/magit/magit/wiki/Cheatsheet][Cheat Sheet]] is helpful.
