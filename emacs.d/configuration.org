@@ -152,12 +152,14 @@ to make them easier to move around. I use tmux outside of emacs and wanted to ma
 emacs frames behave a bit more like tmux when rearranging.
 
 #+BEGIN_SRC emacs-lisp
-(global-set-key (kbd "C-x M-t") 'transpose-frame)
-(global-set-key (kbd "C-x M-SPC") 'flip-frame)
-(global-set-key (kbd "C-x M-f") 'flop-frame)
-(global-set-key (kbd "C-x M-r") 'rotate-frame)
-(global-set-key (kbd "C-x M-.") 'rotate-frame-clockwise)
-(global-set-key (kbd "C-x M-,") 'rotate-frame-anticlockwise)
+(use-package transpose-frame
+  :config
+  (global-set-key (kbd "C-x M-t") 'transpose-frame)
+  (global-set-key (kbd "C-x M-SPC") 'flip-frame)
+  (global-set-key (kbd "C-x M-f") 'flop-frame)
+  (global-set-key (kbd "C-x M-r") 'rotate-frame)
+  (global-set-key (kbd "C-x M-.") 'rotate-frame-clockwise)
+  (global-set-key (kbd "C-x M-,") 'rotate-frame-anticlockwise))
 #+END_SRC
 * Make Emacs look nicer
 
