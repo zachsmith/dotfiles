@@ -16,10 +16,13 @@ Use [[https://github.com/hrs/sensible-defaults.el/blob/master/sensible-defaults.
 (sensible-defaults/backup-to-temp-directory)
 #+END_SRC
 
-Show line numbers by default
+Show line numbers by default and use [[https://elpa.gnu.org/packages/nlinum.html][nlinum]] to do it.
 
 #+BEGIN_SRC emacs-lisp
-(global-linum-mode t)
+(use-package nlinum
+  :config
+  (global-nlinum-mode t)
+  (setq nlinum-format "%d "))
 #+END_SRC
 
 Start the server by default
