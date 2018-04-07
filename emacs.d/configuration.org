@@ -107,23 +107,18 @@ Enable auto-complete - I use the [[https://github.com/auto-complete/auto-complet
                          (auto-complete-mode 1))
                        ))
   (zxmth/global-auto-complete-mode t))
-
 #+END_SRC
 
-** Helm
+** Ivy
 
-Use helm search for incremental completions and narrowing selections throughout emacs
+Use Ivy
 
 #+BEGIN_SRC emacs-lisp
-(use-package helm
-  :ensure t
+(use-package ivy
   :config
-  (helm-mode 1)
-  (define-key global-map [remap find-file] 'helm-find-files)
-  (define-key global-map [remap occur] 'helm-occur)
-  (define-key global-map [remap list-buffers] 'helm-buffers-list)
-  (define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
-  (define-key global-map [remap execute-extended-command] 'helm-M-x))
+  (ivy-mode 1)
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-count-format "(%d/%d) "))
 #+END_SRC
 * Switch and rebalance windows when splitting
 
@@ -322,7 +317,7 @@ Use rjsx-mode for jsx files.
 #+END_SRC
 ** Projectile
 
-Use Projectile to help manage files related to projects. Use helm to search within projects.
+Use Projectile to help manage files related to projects.
 
 #+BEGIN_SRC emacs-lisp
 (use-package projectile
@@ -335,10 +330,6 @@ Use Projectile to help manage files related to projects. Use helm to search with
         '(:eval
           (format " [%s]"
                   (projectile-project-name)))))
-
-(use-package helm-projectile
-  :commands (helm-projectile helm-projectile-switch-project)
-  :ensure t)
 
 #+END_SRC
 
