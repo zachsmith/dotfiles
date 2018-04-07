@@ -81,8 +81,6 @@ Compile packages and prefer the newest version
 #+END_SRC
 * Set personal information
 
-** Contact Information
-
 #+BEGIN_SRC emacs-lisp
 (setq user-full-name "Zachary Smith"
       user-mail-address "z@zxmth.us")
@@ -98,6 +96,7 @@ Compile packages and prefer the newest version
 * Searching
 
 ** Auto-Complete
+
 Enable auto-complete - I use the [[https://github.com/auto-complete/auto-complete][auto-complete]] package
 #+BEGIN_SRC emacs-lisp
 (use-package auto-complete
@@ -114,7 +113,7 @@ Enable auto-complete - I use the [[https://github.com/auto-complete/auto-complet
 
 ** Ivy
 
-Use Ivy
+Use [[https://github.com/abo-abo/swiper][Ivy]] as a generic completion front-end
 
 #+BEGIN_SRC emacs-lisp
 (use-package ivy
