@@ -4,6 +4,8 @@ alias _reload='. ~/.bashrc'
 alias hogs='ps -amcwwwxo "command %mem %cpu" | grep -v grep |head -11'
 alias tad='tmux attach -d'
 alias vi=vim
+alias ecn='emacsclient -nw'
+alias ec=emacsclient
 
 ### RUBY!!! ###
 alias be='bundle exec'
