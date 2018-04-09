@@ -49,6 +49,8 @@ Don't litter my init file with custom settings
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
 #+END_SRC
+
+
 * Packages
 
 Use =use-package= for managing packages in emacs. Setup some default package
@@ -180,7 +182,10 @@ emacs frames behave a bit more like tmux when rearranging.
   :config
   (setq solarized-high-contrast-mode-line t))
 
-(load-theme 'solarized-dark t)
+(if (display-graphic-p)
+    (load-theme 'solarized-dark t) ;; favorite theme
+  (load-theme 'wombat' t)) ;; works well enough in terminal
+;;(load-theme 'solarized-dark t)
 #+END_SRC
 * UI preferences
 
