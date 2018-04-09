@@ -75,10 +75,6 @@ archives & initialize.
  (require 'use-package))
 #+END_SRC
 
-#+BEGIN_SRC emacs-lisp
-(use-package diminish)
-#+END_SRC
-
 Compile packages and prefer the newest version
 
 #+BEGIN_SRC emacs-lisp
@@ -226,6 +222,11 @@ Make the frame title match the current project as defined by Projectile
   :config
   (setq powerline-arrow-shape 'arrow)
   (powerline-default-theme))
+#+END_SRC
+** Diminish minor modes
+
+#+BEGIN_SRC emacs-lisp
+(diminish 'flyspell-mode)
 #+END_SRC
 * Org Mode Settings
 
