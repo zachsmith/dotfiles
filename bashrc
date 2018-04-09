@@ -27,6 +27,9 @@ export HISTSIZE=10000
 # Append to the history file when exiting instead of overwriting it
 shopt -s histappend
 
+# Check window size after commands in case it has changed
+shopt -s checkwinsize
+
 source ~/.bash/functions
 source ~/.bash/aliases
 
