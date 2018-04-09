@@ -173,6 +173,19 @@ emacs frames behave a bit more like tmux when rearranging.
   (global-set-key (kbd "C-x M-.") 'rotate-frame-clockwise)
   (global-set-key (kbd "C-x M-,") 'rotate-frame-anticlockwise))
 #+END_SRC
+
+* Multiple Cursors
+
+Use [[https://github.com/magnars/multiple-cursors.el][Multiple Cursors]] by [[https://github.com/magnars][Magnar Sveen]]
+
+#+BEGIN_SRC emacs-lisp
+(use-package multiple-cursors
+  :config
+  (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+  (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+  (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+  (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this))
+#+END_SRC
 * Make Emacs look nicer
 
 ** Use [[https://github.com/bbatsov/solarized-emacs][Solarized theme]]
