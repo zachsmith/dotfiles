@@ -20,6 +20,7 @@ Show line numbers by default and use [[https://elpa.gnu.org/packages/nlinum.html
 
 #+BEGIN_SRC emacs-lisp
 (use-package nlinum
+  :diminish
   :config
   (global-nlinum-mode t)
   (setq nlinum-format "%d "))
@@ -72,10 +73,15 @@ archives & initialize.
  (require 'use-package))
 #+END_SRC
 
+#+BEGIN_SRC emacs-lisp
+(use-package diminish)
+#+END_SRC
+
 Compile packages and prefer the newest version
 
 #+BEGIN_SRC emacs-lisp
 (use-package auto-compile
+  :diminish
   :config (auto-compile-on-load-mode))
 (setq load-prefer-newer t)
 #+END_SRC
@@ -100,6 +106,7 @@ Compile packages and prefer the newest version
 Enable auto-complete - I use the [[https://github.com/auto-complete/auto-complete][auto-complete]] package
 #+BEGIN_SRC emacs-lisp
 (use-package auto-complete
+  :diminish
   :config
   (ac-config-default)
   (add-to-list 'ac-modes 'name-of-mod)
@@ -117,6 +124,7 @@ Use [[https://github.com/abo-abo/swiper][Ivy]] as a generic completion front-end
 
 #+BEGIN_SRC emacs-lisp
 (use-package ivy
+  :diminish ivy-mode
   :config
   (ivy-mode 1)
   (setq ivy-use-virtual-buffers t)
