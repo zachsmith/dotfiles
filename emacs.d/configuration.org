@@ -373,6 +373,24 @@ Use projectile-ag to search project for symbol under the cursor
 (global-set-key (kbd "C-c v") 'projectile-ag)
 (global-set-key (kbd "C-c C-v") 'zxmth/search-project-for-symbol-at-point)
 #+END_SRC
+** Expand Region
+
+[[https://github.com/magnars/][Magnar Sveen]] implemented one of my favorite features from IDEA...
+
+#+BEGIN_SRC emacs-lisp
+(use-package expand-region
+   :config
+   (global-set-key (kbd "C-%") 'er/expand-region))
+#+END_SRC
+** Rest Client
+
+Handy, dandy rest client
+
+#+BEGIN_SRC emacs-lisp
+(use-package restclient)
+#+END_SRC
+
+
 * Writing
 ** Markdown
 
