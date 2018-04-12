@@ -128,6 +128,18 @@ Use [[https://github.com/abo-abo/swiper][Ivy]] as a generic completion front-end
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "(%d/%d) "))
 #+END_SRC
+
+** Silver Searcher
+
+I have gotten pretty used to using Ag and find it handy with projectile.
+
+#+BEGIN_SRC emacs-lisp
+(use-package ag
+   :config
+   (setq ag-highlight-search t
+         ag-reuse-window 't
+         ag-reuse-buffers 't))
+#+END_SRC
 * Switch and rebalance windows when splitting
 
 I generally want to switch to the new window after creating it.
