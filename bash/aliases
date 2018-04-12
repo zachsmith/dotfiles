@@ -6,6 +6,7 @@ alias tad='tmux attach -d'
 alias vi=vim
 alias ecn='emacsclient -nw'
 alias ec=emacsclient
+alias gpg=gpg2
 
 ### RUBY!!! ###
 alias be='bundle exec'
