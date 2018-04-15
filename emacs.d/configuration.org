@@ -142,6 +142,24 @@ I have gotten pretty used to using Ag and find it handy with projectile.
 #+END_SRC
 * Switch and rebalance windows when splitting
 
+I like having keys to more easily jump around open buffers
+
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "C-c k") 'windmove-up)
+(global-set-key (kbd "C-c j") 'windmove-down)
+(global-set-key (kbd "C-c h") 'windmove-left)
+(global-set-key (kbd "C-c l") 'windmove-right)
+#+END_SRC
+
+I often resize buffers - bind keys to resizing that are similar to navigation
+
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "C-c K") 'enlarge-window)
+(global-set-key (kbd "C-c J") 'shrink-window)
+(global-set-key (kbd "C-c H") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-c L") 'shrink-window-horizontally)
+#+END_SRC
+
 I generally want to switch to the new window after creating it.
 
 #+BEGIN_SRC emacs-lisp
