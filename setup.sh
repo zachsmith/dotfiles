@@ -11,7 +11,6 @@ gitignore
 irbrc
 pryrc
 pryrc_rails
-emacs.d
 "
 
 # Remove existing links or files - this is dangerous
