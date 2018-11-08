@@ -5,8 +5,7 @@ export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
 # git prompt goodnes
 # load /etc for Ubuntu and /usr/share for Fedora
-[[ -s "/etc/bash_completion.d/git-prompt" ]] && source "/etc/bash_completion.d/git-prompt" # Ubunto
-[[ -s "/usr/share/git-core/contrib/completion/git-prompt.sh" ]] && source "/usr/share/git-core/contrib/completion/git-prompt.sh" # Fedora
+[[ -s ~/.git-prompt.sh ]] && source ~/.git-prompt.sh # MacOS
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -48,8 +47,8 @@ fi
 
 export EDITOR="vim"
 
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
