@@ -1,0 +1,6 @@
+[submodule "git-radar"]
+	path = git-radar
+	url = https://github.com/michaeldfallen/git-radar.git
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git

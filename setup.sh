@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 FILES="
 bash
@@ -12,16 +12,24 @@ irbrc
 pryrc
 pryrc_rails
 tmux.conf
+zsh
+zshrc
+oh-my-zsh
+git-radar
 "
+
+# Grab git submodules
+echo "Updating git submodules..."
+git submodule update --init --recursive --remote
 
 # Remove existing links or files - this is dangerous
 if [ "$1" == "reset" ]
 then
   for f in $FILES
   do
-    if [ -f ~/.$f -o -d ~/.$f ]
+    if [ -f ~/.$f -o -d ~/.$f ] # if file or directory exist
     then
-      if [ -h ~/.$f ]
+      if [ -h ~/.$f ] # make sure it's a symlink
       then
         echo "Unlinking ~/.$f"
         rm ~/.$f
