@@ -8,4 +8,5 @@ local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 RPROMPT='%{${_lineup}%}${return_code}%{$reset_color%} %*%{${_linedown}%}'
 
-export GIT_RADAR_FORMAT="$fg_bold[yellow]%{branch} %{local} %{remote} %{changes} %{stash}"
+export GIT_RADAR_COLOR_BRANCH="$fg_bold[yellow]"
+export GIT_RADAR_FORMAT="%{branch} %{local} %{remote} %{changes} %{stash}"
