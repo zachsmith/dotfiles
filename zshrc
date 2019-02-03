@@ -5,7 +5,12 @@ export ZSH_THEME="zxmth"
 
 autoload -U colors && colors
 
-plugins=(git)
+plugins=(
+  git
+  zsh-nvm
+)
+
+export NVM_LAZY_LOAD=true
 
 source $ZSH/oh-my-zsh.sh
 
