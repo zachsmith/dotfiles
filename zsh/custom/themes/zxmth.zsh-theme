@@ -11,7 +11,7 @@ local ret_status="%(?:%{$grey%}:%{$red%})"
 PROMPT='${ret_status}[%{$cyan%}%c${ret_status}]%{$reset_color%} $(git-radar --zsh)
 ${ret_status}(%{$fg_bold[white]%}%m${ret_status})➜ '
 
-RPROMPT='%{${_lineup}%}${return_code}%{$reset_color%} %*%{${_linedown}%}'
+RPROMPT='%{${_lineup}%}${return_code}%{$reset_color%} $ret_status%*%{$reset_color%{${_linedown}%}'
 
 export GIT_RADAR_COLOR_BRANCH="$yellow"
 export GIT_RADAR_FORMAT="%{branch} %{local} %{remote} %{changes} %{stash}"
