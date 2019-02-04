@@ -15,4 +15,4 @@ export NVM_LAZY_LOAD=true
 source $ZSH/oh-my-zsh.sh
 
 # i put machine specific stuff in ~/.localconfig
-[[ -a $HOME/.localconfig ]] && source $HOME/.localconfig
+[[ -a $HOME/.localconfig ]] && source $HOME/.localconfig || true
