@@ -43,7 +43,7 @@ fi
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 for f in $FILES
 do
-  if [ ! -f ~/.$f ]
+  if [ ! -f ~/.$f -a ! -d ~/.$f ]
   then
     echo "Linking $DIR/$f to ~/.$f" && ln -s $DIR/$f ~/.$f
   else
