@@ -1,9 +1,11 @@
 [submodule "git-radar"]
 	path = git-radar
 	url = https://github.com/michaeldfallen/git-radar.git
+	ignore = untracked
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+	ignore = untracked
 [submodule "zsh/custom/plugins/zsh-nvm"]
 	path = zsh/custom/plugins/zsh-nvm
 	url = https://github.com/lukechilds/zsh-nvm
