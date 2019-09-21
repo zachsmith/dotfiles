@@ -10,6 +10,7 @@ autoload -U colors && colors
 plugins=(
   git
   zsh-nvm
+  zsh-dircolors-solarized
 )
 
 export NVM_LAZY_LOAD=true
