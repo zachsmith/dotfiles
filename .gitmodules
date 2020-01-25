@@ -9,3 +9,6 @@
 [submodule "zsh/custom/plugins/zsh-nvm"]
 	path = zsh/custom/plugins/zsh-nvm
 	url = https://github.com/lukechilds/zsh-nvm
+[submodule "zsh/custom/plugins/zsh-dircolors-solarized"]
+	path = zsh/custom/plugins/zsh-dircolors-solarized
+	url = https://github.com/joel-porquet/zsh-dircolors-solarized.git
