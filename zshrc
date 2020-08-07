@@ -1,6 +1,6 @@
 [[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
 
-export PATH=~/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:~/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:~/.git-radar:$PATH
+export PATH=~/bin:~/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM=$HOME/.zsh/custom
 export ZSH_THEME="zxmth"
