@@ -4,6 +4,7 @@ export PATH=~/bin:~/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM=$HOME/.zsh/custom
 export ZSH_THEME="zxmth"
+export PASSWORD_STORE_GPG_OPTS="--no-throw-keyids"
 
 autoload -U colors && colors
 
