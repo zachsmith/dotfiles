@@ -1,19 +1,32 @@
 [user]
 	name = Zach Smith
 	email = z@zxmth.us
+	signingkey = 0x1CFEA487A5FE89BD
 [core]
 	autocrlf = input
 	safecrlf = true
-  excludesfile = ~/.gitignore
+  	excludesfile = ~/.gitignore
+
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
-  ui = always
+  	diff = auto
+  	status = auto
+  	branch = auto
+  	interactive = auto
+  	ui = always
 [format]
-  pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
+  	pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
+
 [github]
 	user = zachsmith
+
 [push]
 	default = simple
+
+[pull]
+	rebase = true
+
+[init]
+	defaultBranch = main
+
+[commit]
+ 	gpgsign = true
