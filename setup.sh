@@ -50,3 +50,11 @@ do
     echo "WARNING: ~/.$f exists - not linking"
   fi
 done
+
+# Use gpg config
+GPGDIR=~/.gnupg
+GPGCONF=gpg.conf
+[ ! -d $GPGDIR ] && echo "Making $GPGDIR..." && mkdir -m 0700 $GPGDIR
+[ ! -f $GPGDIR/$GPGCONF ] && ln -s $DIR/$GPGCONF $GPGDIR/$GPGCONF || {
+  echo "WARNING: $GPGDIR/$GPGCONF exists - not linking"
+}
