@@ -11,7 +11,7 @@ autoload -U colors && colors
 plugins=(
   git
   zsh-nvm
-  zsh-dircolors-solarized
+  autojump
 )
 
 export NVM_LAZY_LOAD=true
