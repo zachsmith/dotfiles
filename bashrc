@@ -5,7 +5,7 @@ export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
 # git prompt goodnes
 # load /etc for Ubuntu and /usr/share for Fedora
-[[ -s ~/.git-prompt.sh ]] && source ~/.git-prompt.sh # MacOS
+[[ -s "/usr/share/doc/git/contrib/completion/git-completion.bash" ]] && source /usr/share/doc/git/contrib/completion/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
