@@ -12,11 +12,19 @@ plugins=(
   git
   zsh-nvm
   autojump
+  fzf
 )
 
 export NVM_LAZY_LOAD=true
 
 source $ZSH/oh-my-zsh.sh
 
+# Functions & Aliases
+s() {
+  cd ~/src/$(ls ~/src | fzf)
+}
+
+alias gcz="git log --oneline | fzf"
+#
 # i put machine specific stuff in ~/.localconfig
 [[ -a $HOME/.localconfig ]] && source $HOME/.localconfig || true
