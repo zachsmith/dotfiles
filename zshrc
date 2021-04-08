@@ -44,6 +44,10 @@ gczdd() {
   git diff $(gczc) $(gczc)
 }
 
-#
+# fzf the branches!
+gczb() {
+  git checkout $(git for-each-ref --format='%(refname:short)' refs/heads/ | fzf)
+}
+
 # i put machine specific stuff in ~/.localconfig
 [[ -a $HOME/.localconfig ]] && source $HOME/.localconfig || true
