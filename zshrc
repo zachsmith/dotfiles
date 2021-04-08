@@ -24,7 +24,26 @@ s() {
   cd ~/src/$(ls ~/src | fzf)
 }
 
-alias gcz="git log --oneline | fzf"
+# search git log with fzf
+gcz() {
+  git log --oneline | fzf
+}
+
+# print commit hash for selected commit
+gczc() {
+  gcz | awk '{print $1}'
+}
+
+# diff HEAD against selected commit
+gczd() {
+  git diff $(gczc)
+}
+
+# diff two selected commits
+gczdd() {
+  git diff $(gczc) $(gczc)
+}
+
 #
 # i put machine specific stuff in ~/.localconfig
 [[ -a $HOME/.localconfig ]] && source $HOME/.localconfig || true
