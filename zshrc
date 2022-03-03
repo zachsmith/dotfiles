@@ -50,8 +50,8 @@ gczb() {
 }
 
 secret () {
-  output=~/"${1}".$(date +%s).enc
-  gpg --encrypt --armor --output ${output} -r 0x7B9E10EA1C2AE297 -r z@xmyth.me "${1}" && echo "${1} -> ${output}"
+  output="$(realpath ${1}).$(date +%s).enc"
+  gpg --encrypt --armor --output ${output} -r z@xmyth.me "${1}" && echo "${1} -> ${output}"
 }
 
 reveal () {
