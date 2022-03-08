@@ -1,6 +1,6 @@
 [[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
 
-export PATH=~/bin:~/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$PATH:~/.cargo/bin
+export PATH=~/bin:~/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:~/.cargo/bin:~/.local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM=$HOME/.zsh/custom
 export ZSH_THEME="zxmth"
@@ -58,6 +58,11 @@ reveal () {
   output=$(echo "${1}" | rev | cut -c16- | rev)
   gpg --decrypt --output ${output} "${1}" && echo "${1} -> ${output}"
 }
+
+# Use GPG for ssh-agent if configured
+if [ -S $(gpgconf --list-dirs agent-ssh-socket) ]; then
+  export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gnupg/S.gpg-agent.ssh
+fi
 
 # i put machine specific stuff in ~/.localconfig
 [[ -a $HOME/.localconfig ]] && source $HOME/.localconfig || true

@@ -55,6 +55,9 @@ done
 GPGDIR=~/.gnupg
 GPGCONF=gpg.conf
 [ ! -d $GPGDIR ] && echo "Making $GPGDIR..." && mkdir -m 0700 $GPGDIR
-[ ! -f $GPGDIR/$GPGCONF ] && ln -s $DIR/$GPGCONF $GPGDIR/$GPGCONF || {
-  echo "WARNING: $GPGDIR/$GPGCONF exists - not linking"
-}
+for f in gpg.conf gpg-agent.conf
+do
+  [ ! -f $GPGDIR/$f ] && ln -s $DIR/$f $GPGDIR/$f || {
+    echo "WARNING: $GPGDIR/$f exists - not linking"
+  }
+done
