@@ -1,11 +1,5 @@
 [[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
 
-export PATH=~/bin:~/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:~/.cargo/bin:~/.local/bin:$PATH
-export ZSH="$HOME/.oh-my-zsh"
-export ZSH_CUSTOM=$HOME/.zsh/custom
-export ZSH_THEME="zxmth"
-export PASSWORD_STORE_GPG_OPTS="--no-throw-keyids"
-
 autoload -U colors && colors
 
 plugins=(
@@ -14,8 +8,6 @@ plugins=(
   autojump
   fzf
 )
-
-export NVM_LAZY_LOAD=true
 
 source $ZSH/oh-my-zsh.sh
 

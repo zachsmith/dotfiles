@@ -14,6 +14,7 @@ pryrc_rails
 tmux.conf
 zsh
 zshrc
+zshenv
 oh-my-zsh
 git-radar
 "
