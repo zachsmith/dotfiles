@@ -51,10 +51,5 @@ reveal () {
   gpg --decrypt --output ${output} "${1}" && echo "${1} -> ${output}"
 }
 
-# Use GPG for ssh-agent if configured
-if [ -S $(gpgconf --list-dirs agent-ssh-socket) ]; then
-  export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gnupg/S.gpg-agent.ssh
-fi
-
 # i put machine specific stuff in ~/.localconfig
 [[ -a $HOME/.localconfig ]] && source $HOME/.localconfig || true
